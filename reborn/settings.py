@@ -267,7 +267,13 @@ STATIC_URL = 'https://bucketforconnectbill.s3.ap-northeast-2.amazonaws.com/'
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # # The URL to use when referring to static files (where they will be served from)
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
+
+# extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+     os.path.join(BASE_DIR, 'static'),  
+)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
