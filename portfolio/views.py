@@ -16,7 +16,7 @@ from .serializers import ProjectSerializer, PopolSerializer,BriefPopolSerializer
 from rest_framework import status
 
 from users.models import *
-import cv2
+#import cv2
 import os
 from django.conf import settings
 from django.core.files.storage import default_storage
@@ -130,6 +130,7 @@ def project_view_detail(request,pk):
    
     return Response({'project': projectSerializer.data}, status=status.HTTP_200_OK)
 
+'''
 @api_view(['POST'])
 @permission_classes([IsAuthenticated, ])
 def image_handler(request):
@@ -151,7 +152,7 @@ def image_handler(request):
 
     print (path)
     return Response({'file_path' :'media/'+path})
-
+'''
 
 
         
