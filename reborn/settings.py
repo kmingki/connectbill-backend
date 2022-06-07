@@ -33,7 +33,7 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 # # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = ['connectbill.herokuapp.com','127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['connectbillssu2022.herokuapp.com','127.0.0.1', 'localhost']
 
 
 # Application definition
