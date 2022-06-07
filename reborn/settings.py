@@ -33,7 +33,7 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 # # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = ['connectbill.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['connectbill.herokuapp.com','127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -186,10 +186,6 @@ AUTH_USER_MODEL = 'users.User'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# AWS_S3_SECURE_URLS = False       # use http instead of https
-# AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
-
 ACCOUNT_LOGOUT_ON_GET = True
 
 # 로그인 성공후 이동하는 URL
@@ -239,22 +235,6 @@ SIMPLE_JWT = {
   'AUTH_COOKIE_PATH': '/',        # The path of the auth cookie.
   'AUTH_COOKIE_SAMESITE': 'Lax',  # Whether to set the flag restricting cookie leaks on cross-site requests. This can be 'Lax', 'Strict', or None to disable the flag.
 }
-
-
-#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#AWS_S3_SECURE_URLS = False       # use http instead of https
-#AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
-
-#AWS_S3_ACCESS_KEY_ID = os.getenv('ACCESS_KEY')
-#AWS_S3_SECRET_ACCESS_KEY = os.getenv('SECRET_ACCESS_KEY')
-#AWS_STORAGE_BUCKET_NAME = 'bucketforconnectbill'
-
-
-
-# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
-#STATIC_URL = 'https://bucketforconnectbill.s3.ap-northeast-2.amazonaws.com/'
 
 
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
