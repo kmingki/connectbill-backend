@@ -5,7 +5,7 @@ from .models import Designer,Client
 from reborn.settings import MEDIA_URL
 
 import os
-default_profile_image =  os.path.join(MEDIA_URL,'profile_image/user_default_image.png')
+default_profile_image =  os.path.join('/profile_image/user_default_image.png')
 
 def get_and_authenticate_user(username, password):
     user = authenticate(username=username, password=password)
